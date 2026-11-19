@@ -23,7 +23,7 @@ Every month, hundreds of production orders close with actual labour and material
 - Pop-ups summarise the period: worst machines for setup and machine time, the worst single operations, and results by order type
 - **Weekly** uses the last 14 working days (Mon–Sat). **Monthly** uses the last 30 calendar days. Both run the same module.
 
-**Time saved:** a whole day of compiling now takes about 10 minutes of the code running.
+**Time saved:** a whole day of compiling across three plants now takes about 10 minutes of the code running.
 
 ## Expected results on the demo data
 | Stage | Result |

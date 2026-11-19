@@ -14,11 +14,13 @@ I'm a Cost Accountant Controller in a pump and valve manufacturer. My month runs
 | 06 | [Cost Controlling Dashboard](06-cost-controlling-dashboard/) | All the daily SAP downloads → one interactive dashboard (demo with screenshots) |
 
 ## Time saved
+Compilation that used to be done by hand now runs in minutes, leaving more time for analysis.
+
 | Task | Before | After |
 |---|---|---|
-| Production variance analysis | A whole day of compiling | 10 minutes |
-| Monthly claims reporting | 4 hours | 5 minutes |
-| Sales report | 2 hours per market area | 10 minutes |
+| Production variance compilation (3 plants) | A whole day of compiling | 10 minutes |
+| Monthly claims compilation | 4 hours | 5 minutes |
+| Sales report compilation | 2 hours per market area | 10 minutes |
 | Sales order cost breakdown for a requester | 30 minutes | 3 minutes |
 | SAP downloads for the dashboard | Run one by one | One 5-minute SAP script |
 
