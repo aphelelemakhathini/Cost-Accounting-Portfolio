@@ -1,0 +1,33 @@
+Report group 6O01	Actual costs - expanded view
+Selections
+Sales order	30051877
+Item from	10
+     to	10
+Controlling area	1000 Acme Pumps
+Period from	1.2026 to 10.2026
+Values in	ZAR
+
+Cost Elements	Total	Fixed	Variable	Output Quantities
+00047105  Volute casing GG25 casting	15 281,67		15 281,67	3 PC
+00047300  Bar stock 1.4021 Ø60	1 953,60		1 953,60	6,6 KG
+00047313  Casting CuSn10	3 556,80		3 556,80	19,5 KG
+*  400000  Raw materials	20 792,07		20 792,07	
+00047144  Mechanical seal faces SiC	22 140,00		22 140,00	3 PC
+00047157  Ball bearing 6312	3 864,00		3 864,00	6 PC
+00047170  Electric motor 22 kW IE3	118 500,00		118 500,00	3 PC
+00047183  Flexible coupling	9 870,00		9 870,00	3 PC
+*  410000  Purchased parts	154 686,40		154 686,40	
+MCH14/LAB  Turn shaft	4 110,00	1 644,00	2 466,00	6 H
+MCH22/LAB  Machine casing flanges	9 864,00	3 945,60	5 918,40	14,4 H
+MCH28/LAB  Grind bearing seats	1 644,00	657,60	986,40	2,4 H
+*  620100  Labour - machining	15 618,00	6 247,20	9 370,80	
+ASM01/LAB  Assemble rotating unit	4 860,00	1 944,00	2 916,00	9 H
+WLD01/LAB  Weld baseplate frame	13 725,00	5 490,00	8 235,00	22,5 H
+ASM03/LAB  Final assembly and test	9 720,00	3 888,00	5 832,00	18 H
+*  620200  Labour - assembly & welding	28 305,00	11 322,00	16 983,00	
+OH-LAB  Overhead surcharge 30 % on labour	13 176,90	13 176,90	0,00	
+*  630000  Manufacturing overhead	13 176,90	13 176,90	0,00	
+1006012  Prod. order 1006012 (settled)	61 234,55-	18 300,00-	42 934,55-	
+1006019  Prod. order 1006019 (settled)	58 900,10-	17 150,00-	41 750,10-	
+*  655000  Settlement - production orders	120 134,65-	35 450,00-	84 684,65-	
+**	112 443,72	4 703,90-	117 147,62	
