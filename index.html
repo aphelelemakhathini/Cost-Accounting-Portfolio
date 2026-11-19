@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aphelele Makhathini | Cost Accounting Automation Portfolio</title>
+<meta name="description" content="SAP-to-Excel automation for cost accounting: production variances, warranty claims, BOM costing, sales margin and a live cost controlling dashboard. All data fictional.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#14213d;--navy2:#1f3a5f;--blue:#2a62d9;--teal:#0f9e8e;--ink:#1a2233;--mute:#5b6678;--line:#e3e8f0;--bg:#f5f7fb;--card:#fff}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+a{color:var(--blue);text-decoration:none}
+.wrap{max-width:1120px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;background:rgba(20,33,61,.96);backdrop-filter:blur(6px)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:60px}
+nav .brand{color:#fff;font-weight:700;letter-spacing:.2px}
+nav .links a{color:#c9d3e6;margin-left:22px;font-size:14px;font-weight:500}
+nav .links a:hover{color:#fff}
+header.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 60%,#24508f 100%);color:#fff;padding:84px 0 72px}
+.hero .eyebrow{text-transform:uppercase;letter-spacing:2px;font-size:12.5px;color:#9fb4d9;font-weight:600}
+.hero h1{font-size:46px;line-height:1.1;font-weight:800;margin:14px 0 10px}
+.hero .role{font-size:19px;color:#dbe4f5;font-weight:500}
+.hero p.lead{max-width:720px;margin-top:22px;font-size:17px;color:#d0daee}
+.badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.badge{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);color:#e8eefb;font-size:13px;padding:6px 12px;border-radius:999px}
+.ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:34px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:10px;font-weight:600;font-size:15px;transition:transform .15s,box-shadow .15s}
+.btn:hover{transform:translateY(-1px)}
+.btn.primary{background:#fff;color:var(--navy);box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.btn.ghost{border:1px solid rgba(255,255,255,.35);color:#fff}
+.btn.dark{background:var(--navy);color:#fff}
+.btn.line{border:1px solid var(--line);color:var(--ink);background:#fff}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-34px;position:relative}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;box-shadow:0 8px 24px rgba(20,33,61,.06)}
+.stat b{display:block;font-size:23px;font-weight:800;color:var(--navy)}
+.stat span{font-size:13.5px;color:var(--mute)}
+section{padding:72px 0 8px}
+.sh{display:flex;align-items:end;justify-content:space-between;gap:20px;margin-bottom:26px}
+.sh h2{font-size:30px;font-weight:800;color:var(--navy)}
+.sh p{color:var(--mute);max-width:620px}
+.kicker{color:var(--blue);font-weight:700;font-size:13px;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:6px}
+.feature{display:grid;grid-template-columns:1.25fr 1fr;gap:30px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:0 10px 30px rgba(20,33,61,.07)}
+.feature img{width:100%;border-radius:12px;border:1px solid var(--line);display:block}
+.feature h3{font-size:24px;color:var(--navy);margin-bottom:8px}
+.feature ul{list-style:none;margin:16px 0 22px}
+.feature li{padding:6px 0 6px 26px;position:relative;font-size:15px}
+.feature li:before{content:"";position:absolute;left:4px;top:13px;width:8px;height:8px;border-radius:2px;background:var(--teal)}
+.thumbs{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.thumbs img{border-radius:8px}
+.grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 6px 18px rgba(20,33,61,.05);transition:box-shadow .2s,transform .2s}
+.card:hover{box-shadow:0 14px 34px rgba(20,33,61,.11);transform:translateY(-2px)}
+.card .shot{height:210px;overflow:hidden;background:#eef2f8;border-bottom:1px solid var(--line)}
+.card .shot img{width:100%;height:100%;object-fit:cover;object-position:top left;display:block}
+.card .body{padding:20px 22px 22px;display:flex;flex-direction:column;flex:1}
+.card .num{font-size:12.5px;font-weight:700;color:var(--blue);letter-spacing:1px}
+.card h3{font-size:20px;color:var(--navy);margin:2px 0 10px}
+.card .lbl{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.8px;color:var(--mute);margin-top:10px}
+.card p{font-size:14.5px}
+.card ul{margin:4px 0 0 18px;font-size:14.5px}
+.card .result{margin-top:14px;background:#eefaf7;border:1px solid #c7ece4;color:#0b6b60;border-radius:10px;padding:10px 12px;font-size:14px}
+.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:14px}
+.tag{font-size:12px;background:#eef2f8;color:#36445c;padding:3px 9px;border-radius:6px;font-weight:500}
+.card .links{margin-top:auto;padding-top:16px;display:flex;gap:10px}
+.card .links a{font-size:14px;font-weight:600}
+.skills{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.skill{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:20px}
+.skill h4{color:var(--navy);font-size:16px;margin-bottom:8px}
+.skill p{font-size:14.5px;color:#3b4659}
+.note{margin-top:60px;background:#fff7e0;border:1px solid #f1dc9c;border-radius:14px;padding:18px 22px;font-size:14.5px;color:#5a4a12}
+footer{margin-top:60px;padding:30px 0 40px;color:var(--mute);font-size:14px;border-top:1px solid var(--line)}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media (max-width:860px){
+ .hero h1{font-size:34px}.stats{grid-template-columns:repeat(2,1fr)}.feature{grid-template-columns:1fr}
+ .grid,.skills{grid-template-columns:1fr}nav .links a{margin-left:14px}.sh{display:block}.sh p{margin-top:6px}
+}
+@media (max-width:520px){nav .links a:not(.keep){display:none}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+ <a class="brand" href="#">Aphelele Makhathini</a>
+ <div class="links"><a href="#dashboard">Dashboard</a><a href="#projects">Projects</a><a href="#skills">Skills</a>
+ <a class="keep" href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio">GitHub</a></div>
+</div></nav>
+
+<header class="hero"><div class="wrap">
+ <div class="eyebrow">Cost Accounting · Controlling · Automation</div>
+ <h1>Aphelele Makhathini</h1>
+ <div class="role">Cost Accountant Controller &nbsp;|&nbsp; SAP · Excel VBA · AI</div>
+ <p class="lead">I work in manufacturing finance, and much of my month runs on SAP exports. I build tools that turn those exports into reports production, management and Industrial Engineering can act on: variance analysis, warranty claims, product costing and margin reporting, from raw download to finished report. Work that used to take hours, or a whole day, now runs in minutes.</p>
+ <div class="badges">
+  <span class="badge">BCom Accounting (UJ)</span><span class="badge">FMVA</span><span class="badge">BIDA</span><span class="badge">FPAP</span>
+  <span class="badge">Google Data Analytics</span><span class="badge">RE5</span><span class="badge">Xero</span>
+ </div>
+ <div class="ctas">
+  <a class="btn primary" href="06-cost-controlling-dashboard/">▶&nbsp; Launch the live dashboard</a>
+  <a class="btn ghost" href="#projects">See the projects</a>
+  <a class="btn ghost" href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio">View the code</a>
+ </div>
+</div></header>
+
+<div class="wrap">
+ <div class="stats">
+  <div class="stat"><b>1 day → 10 min</b><span>production variance analysis</span></div>
+  <div class="stat"><b>4 h → 5 min</b><span>monthly claims reporting</span></div>
+  <div class="stat"><b>2 h → 10 min</b><span>sales report, per market area</span></div>
+  <div class="stat"><b>5 min</b><span>SAP script downloads every report the dashboard needs</span></div>
+ </div>
+
+ <section id="dashboard">
+  <div class="sh"><div><div class="kicker">Featured</div><h2>Cost Controlling Dashboard</h2></div>
+  <p>One page for the whole month: it reads the daily SAP downloads directly and shows where the month stands and what needs attention.</p></div>
+  <div class="feature">
+   <div>
+    <a href="06-cost-controlling-dashboard/"><img src="06-cost-controlling-dashboard/screenshots/1-overview.png" alt="Dashboard overview"></a>
+    <div class="thumbs">
+     <img src="06-cost-controlling-dashboard/screenshots/4-work-centres.png" alt="Work centres tab">
+     <img src="06-cost-controlling-dashboard/screenshots/5-claims-goodwill.png" alt="Claims and goodwill tab">
+     <img src="06-cost-controlling-dashboard/screenshots/6-co-checks.png" alt="CO checks tab">
+    </div>
+   </div>
+   <div>
+    <h3>Every report in one place</h3>
+    <p>HTML and JavaScript, with SheetJS to read Excel and text files in the browser. Drop in the morning's downloads and it works out which file is which.</p>
+    <ul>
+     <li>Sales and CMII by market area, channel and segment, with losses and partial invoicing flagged</li>
+     <li>Labour and material variances by department and work centre</li>
+     <li>Work centre efficiency, with machining vs setup hours by week</li>
+     <li>Warranty and goodwill claims against turnover</li>
+     <li>CO checks: invoices hanging between FI and CO-PA, and TB vs WIP</li>
+     <li>Month-end duties with due-date reminders, plus an email query tracker</li>
+     <li>Commentary drafted automatically from the numbers</li>
+     <li>All of its SAP exports are downloaded by a 5-minute SAP GUI script</li>
+    </ul>
+    <a class="btn dark" href="06-cost-controlling-dashboard/">▶&nbsp; Open the live demo</a>
+   </div>
+  </div>
+ </section>
+
+ <section id="projects">
+  <div class="sh"><div><div class="kicker">Automation</div><h2>Excel VBA projects</h2></div>
+  <p>Each project contains the macro, a fake SAP-style export to run it on (the before), the workbook it produces (the after) and a write-up.</p></div>
+  <div class="grid">
+
+   <article class="card">
+    <div class="shot"><img src="01-production-variances/output/2-stage2-popup-1-setup.png" alt="Hours variance overview"></div>
+    <div class="body">
+     <div class="num">01</div><h3>Production Variances</h3>
+     <div class="lbl">Problem</div>
+     <p>Hundreds of orders close with labour and material off standard. Management needs to know which orders matter, and the workshop needs to know which operation on which machine caused it.</p>
+     <div class="lbl">What I built</div>
+     <ul><li>Stage 1 flags orders outside ±45% labour and ±20% material</li>
+     <li>Stage 2 compares planned vs confirmed hours per operation, with department tabs and favourable variances</li>
+     <li>A live overview with a plant slicer and dynamic-array Top 5 and Top 10 tables. Remarks survive a re-run.</li></ul>
+     <div class="result"><b>A whole day of compiling → 10 minutes.</b> Demo: 80 labour and 63 material orders flagged. MCH19 runs +2.9 h over on setup per operation, which points to a missing setup standard.</div>
+     <div class="tags"><span class="tag">VBA</span><span class="tag">LET / FILTER / SORTBY</span><span class="tag">Slicers</span><span class="tag">Pivot tables</span></div>
+     <div class="links"><a href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio/tree/main/01-production-variances">Code &amp; data →</a></div>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="shot"><img src="02-warranty-claims/output/1-claims-register-october-posted.png" alt="Claims register after posting October"></div>
+    <div class="body">
+     <div class="num">02</div><h3>Warranty &amp; Goodwill Claims</h3>
+     <div class="lbl">Problem</div>
+     <p>A messy monthly claims export (outline blanks, subtotals mixed with detail lines) has to be posted into a year-to-date register without double-counting anything.</p>
+     <div class="lbl">What I built</div>
+     <ul><li>Step 1 cleans the export and builds a one-line-per-order summary</li>
+     <li>Step 2 splits warranty from goodwill, updates existing orders and inserts new ones above the Total row</li>
+     <li>It rebuilds the YTD and total formulas, moves the graph to the new month, and is safe to re-run</li></ul>
+     <div class="result"><b>4 hours of compiling → 5 minutes.</b> Demo: 18 orders, R566 069 posted. 4 updated and 8 new warranty orders, 2 updated and 4 new goodwill orders.</div>
+     <div class="tags"><span class="tag">VBA</span><span class="tag">Data cleaning</span><span class="tag">Ledgers</span></div>
+     <div class="links"><a href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio/tree/main/02-warranty-claims">Code &amp; data →</a></div>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="shot"><img src="03-bom-costing/output/1-bom-built.png" alt="Costed BOM built from CK11N"></div>
+    <div class="body">
+     <div class="num">03</div><h3>Costed BOM from CK11N</h3>
+     <div class="lbl">Problem</div>
+     <p>A cost estimate export shows its hierarchy only by indentation, with numbers as text. Costing and pricing questions need it as a clean structure that adds up.</p>
+     <div class="lbl">What I built</div>
+     <ul><li>Works out each line's depth from the layout and reads cost fields from the end of the row, so it handles BOMs of any depth</li>
+     <li>Live SUM and Price × Qty formulas across 8 cost-component columns, with collapsible levels</li>
+     <li>Checks every rollup against SAP's own totals</li></ul>
+     <div class="result">Demo: three pumps (R44 195 to R110 906), and every rollup matched SAP.</div>
+     <div class="tags"><span class="tag">VBA</span><span class="tag">Hierarchies of any depth</span><span class="tag">Product costing</span></div>
+     <div class="links"><a href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio/tree/main/03-bom-costing">Code &amp; data →</a></div>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="shot"><img src="04-sales-margin/output/3-popup-3-margins.png" alt="Sales margin summary"></div>
+    <div class="body">
+     <div class="num">04</div><h3>Invoiced Sales Margin (CMII)</h3>
+     <div class="lbl">Problem</div>
+     <p>Management wants losses, margins by market area and segment, and progress against the month's target. Meanwhile, partial invoicing creates fake losses that distort every average.</p>
+     <div class="lbl">What I built</div>
+     <ul><li>A CMII table per order, with COGS built from 9 cost lines and internal adjustments excluded</li>
+     <li>Outliers (COGS 1000%+ of sales) left out of the averages</li>
+     <li>Five summary pop-ups, a hidden summary sheet with charts, and the rand needed per working day</li></ul>
+     <div class="result"><b>2 hours per market area → 10 minutes.</b> Demo: 240 orders, R47.8m invoiced, 8 losses, 79.7% of the monthly target.</div>
+     <div class="tags"><span class="tag">VBA</span><span class="tag">Margin analysis</span><span class="tag">Charts</span></div>
+     <div class="links"><a href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio/tree/main/04-sales-margin">Code &amp; data →</a></div>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="shot"><img src="05-cost-element-breakdown/output/1-cost-element-detail.png" alt="Cost element breakdown"></div>
+    <div class="body">
+     <div class="num">05</div><h3>Sales Order Cost Breakdown</h3>
+     <div class="lbl">Problem</div>
+     <p>When an order's cost looks wrong, the answer is buried in a hard-to-read cost report: totals sit below their lines, credits carry trailing minus signs, and some totals include lines the report doesn't show.</p>
+     <div class="lbl">What I built</div>
+     <ul><li>Groups lines under each cost element with SUM subtotals and a grand total</li>
+     <li>Adds a reconciling line wherever a reported total is more than its visible lines</li>
+     <li>Shows the source report's own total underneath as a check</li></ul>
+     <div class="result"><b>30 minutes per request → 3 minutes.</b> Demo: 6 cost elements, a R312.40 reconciling line, and a grand total that agrees to the report.</div>
+     <div class="tags"><span class="tag">VBA</span><span class="tag">Reconciliation</span><span class="tag">Order costing</span></div>
+     <div class="links"><a href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio/tree/main/05-cost-element-breakdown">Code &amp; data →</a></div>
+    </div>
+   </article>
+
+   <article class="card">
+    <div class="shot"><img src="06-cost-controlling-dashboard/screenshots/3-labour-variances.png" alt="Dashboard labour variances"></div>
+    <div class="body">
+     <div class="num">06</div><h3>Cost Controlling Dashboard</h3>
+     <div class="lbl">Problem</div>
+     <p>The daily and month-end picture was spread across a dozen downloads and workbooks.</p>
+     <div class="lbl">What I built</div>
+     <ul><li>A single-page web dashboard that reads the SAP downloads directly</li>
+     <li>11 tabs with month, YTD and 12-month views, plant, order type and market area filters, and an order or material search</li>
+     <li>Duties and email query tracking built in</li>
+     <li>A SAP GUI script that downloads every report the dashboard needs in 5 minutes</li></ul>
+     <div class="result"><b>Every SAP export it needs is downloaded by a 5-minute SAP script.</b> Runs live in the browser on Acme Pumps demo data.</div>
+     <div class="tags"><span class="tag">JavaScript</span><span class="tag">SheetJS</span><span class="tag">Data visualisation</span></div>
+     <div class="links"><a href="06-cost-controlling-dashboard/">Live demo →</a><a href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio/tree/main/06-cost-controlling-dashboard">Code →</a></div>
+    </div>
+   </article>
+
+  </div>
+ </section>
+
+ <section id="skills">
+  <div class="sh"><div><div class="kicker">How I work</div><h2>What runs through every project</h2></div></div>
+  <div class="skills">
+   <div class="skill"><h4>Reading messy ERP exports</h4><p>Outline blanks stored as empty text, numbers as text in SAP formats (1.234,56 · 1 234,56 · trailing minus), title lines, encodings and hierarchies of any depth.</p></div>
+   <div class="skill"><h4>Rules management can follow</h4><p>Clear thresholds (±45% labour, ±20% material, 2 h and 1 h operation limits), control gaps reported separately, and outliers kept out of averages.</p></div>
+   <div class="skill"><h4>Workbooks that stay correct</h4><p>Formulas rebuilt by code, nothing tied to a fixed column letter, re-running a month replaces it instead of doubling it, and typed remarks are kept.</p></div>
+   <div class="skill"><h4>Live Excel</h4><p>LET, FILTER and SORTBY dynamic arrays, slicers driving named ranges, pivot tables, tables with total rows, and charts built from code.</p></div>
+   <div class="skill"><h4>Works on any regional settings</h4><p>Formulas, conditional formats and number parsing written so they work on comma-decimal and dot-decimal PCs.</p></div>
+   <div class="skill"><h4>AI-assisted development</h4><p>I use AI to design, build and test automation faster, and to create realistic demo data. The dashboard is a JavaScript web app.</p></div>
+  </div>
+  <div class="note"><b>About the data:</b> everything in this portfolio, including "Acme Pumps", its plants, customers, work centres, materials and every figure, is fictional and was generated for demonstration. The macros are my own work, with employer-specific names, codes and settings replaced.</div>
+ </section>
+</div>
+
+<footer><div class="wrap">
+ <span>© 2026 Aphelele Makhathini</span>
+ <span><a href="https://github.com/aphelelemakhathini21-beep/Cost-Accounting-Portfolio">Source on GitHub</a></span>
+</div></footer>
+</body>
+</html>

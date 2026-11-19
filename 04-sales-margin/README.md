@@ -17,6 +17,8 @@ Each month, management wants to know: which orders made a loss, which market are
   4. Low (< 10 %) and high (> 60 %) margins by market area
   5. **Target progress**: invoiced vs the monthly target, balance, working days left and **rand needed per working day**. This is skipped if the data spans more than one month.
 
+**Time saved:** about 2 hours per market area now takes 10 minutes of the code running.
+
 ## Expected results on the demo data
 - **240 orders** (2 internal adjustments excluded), sales **R47,803,456**
 - **8** losses · **7** zero-revenue orders · **4** zero-cost-and-zero-sales orders · **3** no-cost orders

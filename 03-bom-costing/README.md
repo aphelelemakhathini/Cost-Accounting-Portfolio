@@ -13,7 +13,6 @@ A CK11N cost estimate (with quantity structure) export is hard to work with. The
 - Colours each level, groups rows into **+/- outlines** (parent above children) and freezes the header
 - Parses numbers in any regional format (`1 234,56`, `1,234.56`, `1234,56`)
 
-Before this VBA version, I built the same tool in Python (`sap_bom_to_excel.py`).
 
 ## Expected results on the demo data
 | File | Total value | Message |

@@ -18,5 +18,7 @@ A single-page dashboard (HTML + JavaScript, with SheetJS to read Excel and text 
 
 The real version keeps its history in a database and checks my Outlook inbox every weekday morning.
 
+**Time saved:** every SAP export the dashboard reads is downloaded by a SAP GUI script in about 5 minutes.
+
 ## Demo
 `index.html` is the demo build: open it in any browser. **Every figure, customer, plant and work centre is fictional (Acme Pumps).** Screenshots are in `screenshots/`.

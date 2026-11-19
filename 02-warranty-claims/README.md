@@ -21,6 +21,8 @@ Every month, the claims costs export comes out of SAP in a grouped outline view.
 - Moves the **GRAPH** sheet's current-month cells to the new month
 - **Safe to re-run:** running the same month again replaces the amounts instead of doubling them
 
+**Time saved:** about 4 hours of compiling each month now takes 5 minutes of the code running.
+
 ## Expected results on the demo data
 - Claims Summary: **18 orders**, TOTAL **R566,068.68**
 - Ledger pop-up: **CLAIMS 2026: 4 updated, 8 new** · **GOODWILL 2026: 2 updated, 4 new**
@@ -28,6 +30,8 @@ Every month, the claims costs export comes out of SAP in a grouped outline view.
 
 ## After
 Results on the demo data: Claims Summary **18 orders, R566 068.68**. CLAIMS 2026 went from 22 to **30** orders (4 updated, 8 new) and GOODWILL 2026 from 9 to **13** (2 updated, 4 new). The October totals (R377 104.59 + R188 964.09) agree to the export, and the GRAPH cells moved to October.
+
+![Claims register after posting October](output/1-claims-register-october-posted.png)
 
 Output workbooks: `output/Claims_Export_Oct2026_output.xlsm`, `output/Claims_and_Goodwill_2026_output.xlsm`
 

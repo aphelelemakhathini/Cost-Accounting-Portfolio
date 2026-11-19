@@ -13,6 +13,15 @@ I'm a Cost Accountant Controller in a pump and valve manufacturer. My month runs
 | 05 | [Cost element breakdown](05-cost-element-breakdown/) | Actual costs report → grouped cost elements with reconciling lines |
 | 06 | [Cost Controlling Dashboard](06-cost-controlling-dashboard/) | All the daily SAP downloads → one interactive dashboard (demo with screenshots) |
 
+## Time saved
+| Task | Before | After |
+|---|---|---|
+| Production variance analysis | A whole day of compiling | 10 minutes |
+| Monthly claims reporting | 4 hours | 5 minutes |
+| Sales report | 2 hours per market area | 10 minutes |
+| Sales order cost breakdown for a requester | 30 minutes | 3 minutes |
+| SAP downloads for the dashboard | Run one by one | One 5-minute SAP script |
+
 ## Techniques used across the projects
 - **Parsing messy ERP exports:** outline blanks stored as empty text, numbers as text in SAP's format (`1.234,56`, `1 234,56`, trailing minus), title lines, encodings, variable-depth hierarchies
 - **Rules management can follow:** ±45 % labour / ±20 % material bands, 2-hour / 1-hour / 50 % operation thresholds, partial-invoicing outliers left out of margin averages
@@ -27,4 +36,4 @@ I'm a Cost Accountant Controller in a pump and valve manufacturer. My month runs
 
 The README for each project lists the results you should get on the demo data.
 
-**Certifications:** FMVA · FPAP · Google Data Analytics · BCom Accounting (UJ)
+**Certifications:** FMVA · BIDA · FPAP · Google Data Analytics · BCom Accounting (UJ)

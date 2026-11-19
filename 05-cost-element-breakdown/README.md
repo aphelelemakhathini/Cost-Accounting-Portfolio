@@ -1,4 +1,4 @@
-# 05: Actual Cost Element Breakdown
+# 05: Sales Order Cost Breakdown (Actual Cost Elements)
 
 ## The problem
 When a sales order's cost looks wrong, the answer is in the "actual costs, expanded view" report: every cost element with its materials, activities and settlement credits. As a text export, it's hard to read. Element totals sit *below* their lines, IDs and descriptions share one cell, credits carry a trailing minus, quantities and units are mixed together ("14,4 H"), and some element totals include lines the report doesn't show.
@@ -13,6 +13,8 @@ When a sales order's cost looks wrong, the answer is in the "actual costs, expan
 
 **Note:** cost elements don't always mean the same thing from one order to the next, so the output is where the analysis starts, not the answer.
 
+**Time saved:** a sales order cost breakdown is ready for whoever requested it in about 3 minutes, instead of 30.
+
 ## Expected results on the demo data
 - **6 cost elements** processed
 - **Purchased parts (410000)** gets a reconciling adjustment of **R312.40**
@@ -21,6 +23,8 @@ When a sales order's cost looks wrong, the answer is in the "actual costs, expan
 
 ## After
 Results on the demo data: 6 cost elements, a **R312.40** reconciling adjustment on Purchased parts, and a grand total of **R112 443.72**, which agrees to the source report.
+
+![Cost element detail sheet](output/1-cost-element-detail.png)
 
 Output workbook: `output/Actual_Costs_SO30051877_output.xlsm`
 
